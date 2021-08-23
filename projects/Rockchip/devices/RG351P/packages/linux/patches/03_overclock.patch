@@ -8,25 +8,14 @@ diff -rupN RG351P-linux.orig/arch/arm64/boot/dts/rockchip/Makefile RG351P-linux.
 +dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3326-rg351p-linux-oc.dtb
  
  always		:= $(dtb-y)
- subdir-y	:= $(dts-dirs)
+ uubdir-y	:= $(dts-dirs)
 diff -rupN RG351P-linux.orig/arch/arm64/boot/dts/rockchip/px30.dtsi RG351P-linux.new/arch/arm64/boot/dts/rockchip/px30.dtsi
---- RG351P-linux.orig/arch/arm64/boot/dts/rockchip/px30.dtsi	2020-12-31 15:05:34.739405339 -0500
-+++ RG351P-linux.new/arch/arm64/boot/dts/rockchip/px30.dtsi	2021-01-10 20:16:53.720371221 -0500
-@@ -111,10 +111,6 @@
- 		rockchip,temp-hysteresis = <5000>;
- 		rockchip,low-temp = <0>;
- 		rockchip,low-temp-min-volt = <1000000>;
--		rockchip,low-temp-adjust-volt = <
--			/* MHz    MHz    uV */
--			0      1512   50000
--		>;
- 
- 		clocks = <&cru PLL_APLL>;
- 		rockchip,avs-scale = <4>;
-@@ -1354,10 +1350,10 @@
- 		rockchip,temp-hysteresis = <5000>;
- 		rockchip,low-temp = <0>;
- 		rockchip,low-temp-min-volt = <1000000>;
+--- RG351P-linux.orig/arch/arm64/boot/dts/rockchip/px30.dtsi	 2021-08-19 19:35:57.462556100 -0400
++++ RG351P-linux.new/arch/arm64/boot/dts/rockchip/px30.dtsi	 2021-08-17 20:21:25.172992900 -0400
+@@ -1387,10 +1387,10 @@
+		rockchip,temp-hysteresis = <5000>;
+		rockchip,low-temp = <0>;
+		rockchip,low-temp-min-volt = <1000000>;
 -		rockchip,low-temp-adjust-volt = <
 -			/* MHz    MHz    uV */
 -			0      480     50000
@@ -35,9 +24,9 @@ diff -rupN RG351P-linux.orig/arch/arm64/boot/dts/rockchip/px30.dtsi RG351P-linux
 +		//	/* MHz    MHz    uV */
 +		//	0      480     50000
 +		//>;
- 
- 		rockchip,max-volt = <1175000>;
- 		rockchip,evb-irdrop = <25000>;
+
+		rockchip,max-volt = <1175000>;
+		rockchip,evb-irdrop = <25000>;
 diff -rupN RG351P-linux.orig/arch/arm64/boot/dts/rockchip/rk3326-rg351p-linux-oc.dts RG351P-linux.new/arch/arm64/boot/dts/rockchip/rk3326-rg351p-linux-oc.dts
 --- RG351P-linux.orig/arch/arm64/boot/dts/rockchip/rk3326-rg351p-linux-oc.dts	1969-12-31 19:00:00.000000000 -0500
 +++ RG351P-linux.new/arch/arm64/boot/dts/rockchip/rk3326-rg351p-linux-oc.dts	2021-01-23 22:25:02.922487260 -0500

@@ -15,7 +15,7 @@ PKG_STAMP="$KERNEL_TARGET $KERNEL_MAKE_EXTRACMD"
 
 PKG_PATCH_DIRS="$LINUX"
 
-PKG_VERSION="fbfe5c30bf5643f44cc8c87c9b53b1ba2a0bfa49"
+PKG_VERSION="faeb665a41b53ebb386e69fe737ccf0707aaf07b"
 #PKG_SHA256=""
 PKG_URL="https://github.com/hardkernel/linux/archive/$PKG_VERSION.tar.gz"
 

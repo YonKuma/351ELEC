@@ -169,34 +169,23 @@ diff -rupN linux.orig/arch/arm64/boot/dts/rockchip/Makefile.orig linux.new/arch/
 +subdir-y	:= $(dts-dirs)
 +clean-files	:= *.dtb
 diff -rupN linux.orig/arch/arm64/boot/dts/rockchip/px30.dtsi linux.new/arch/arm64/boot/dts/rockchip/px30.dtsi
---- linux.orig/arch/arm64/boot/dts/rockchip/px30.dtsi	2021-03-17 18:48:48.118830466 -0400
-+++ linux.new/arch/arm64/boot/dts/rockchip/px30.dtsi	2021-04-04 07:34:27.177528218 -0400
-@@ -111,10 +111,6 @@
- 		rockchip,temp-hysteresis = <5000>;
- 		rockchip,low-temp = <0>;
- 		rockchip,low-temp-min-volt = <1000000>;
--		rockchip,low-temp-adjust-volt = <
--			/* MHz    MHz    uV */
--			0      1512   50000
--		>;
- 
- 		clocks = <&cru PLL_APLL>;
- 		rockchip,avs-scale = <4>;
-@@ -1354,10 +1350,10 @@
- 		rockchip,temp-hysteresis = <5000>;
- 		rockchip,low-temp = <0>;
- 		rockchip,low-temp-min-volt = <1000000>;
+--- linux.orig/arch/arm64/boot/dts/rockchip/px30.dtsi	 2021-08-19 19:35:57.462556100 -0400
++++ linux.new/arch/arm64/boot/dts/rockchip/px30.dtsi	 2021-08-17 20:21:25.172992900 -0400
+@@ -1387,10 +1387,10 @@
+		rockchip,temp-hysteresis = <5000>;
+		rockchip,low-temp = <0>;
+		rockchip,low-temp-min-volt = <1000000>;
 -		rockchip,low-temp-adjust-volt = <
 -			/* MHz    MHz    uV */
 -			0      480     50000
 -		>;
 +		//rockchip,low-temp-adjust-volt = <
-+		//	/* MHz    MHz    uV */
-+		//	0      480     50000
++		//	 /* MHz    MHz    uV */
++		//	 0      480     50000
 +		//>;
- 
- 		rockchip,max-volt = <1175000>;
- 		rockchip,evb-irdrop = <25000>;
+
+		rockchip,max-volt = <1175000>;
+		rockchip,evb-irdrop = <25000>;
 diff -rupN linux.orig/arch/arm64/boot/dts/rockchip/rk3326-rg351p-linux.dts linux.new/arch/arm64/boot/dts/rockchip/rk3326-rg351p-linux.dts
 --- linux.orig/arch/arm64/boot/dts/rockchip/rk3326-rg351p-linux.dts	1969-12-31 19:00:00.000000000 -0500
 +++ linux.new/arch/arm64/boot/dts/rockchip/rk3326-rg351p-linux.dts	2021-04-04 07:38:57.631333400 -0400
