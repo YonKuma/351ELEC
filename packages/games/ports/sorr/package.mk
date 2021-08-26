@@ -8,13 +8,13 @@ PKG_ARCH="arm"
 PKG_LICENSE="GPL3"
 PKG_SITE="https://github.com/christianhaitian/bennugd-monolithic"
 PKG_URL="$PKG_SITE/archive/$PKG_VERSION.tar.gz"
-PKG_DEPENDS_TARGET="toolchain libpng libogg zlib libtre"
+PKG_DEPENDS_TARGET="toolchain libpng libogg libtre zlib SDL2 SDL2_mixer"
 PKG_SHORTDESC="Streets of Rage Remake"
 PKG_LONGDESC="A remake of the game Streets of Rage"
 PKG_TOOLCHAIN="manual"
 
 make_target() {
 	cd $PKG_BUILD/
-	sh build.sh
+	bash build.sh
 }
 
