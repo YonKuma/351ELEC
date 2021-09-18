@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LD_PRELOAD=/usr/lib/libSDL2-2.0.so.0.14.1
+export LD_PRELOAD=/usr/lib/libSDL2-2.0.so.0.14.1
 
 if [[ ! -f "/storage/roms/gamedata/mupen64plussa/InputAutoCfg.ini" ]]; then
 	mkdir -p /storage/roms/gamedata/mupen64plussa
